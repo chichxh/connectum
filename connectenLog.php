@@ -15,6 +15,7 @@ if(isset($_POST['loginSub'])) {
         $_SESSION['nickname'] = $data['nickname'];
         $_SESSION['name'] = $data['name'];
         $_SESSION['surname'] = $data['surname'];
+        $_SESSION['userpic'] = $data['userpic'];
         $_SESSION['email'] = $data['email'];
         $_SESSION['password'] = $data['password'];
     }
@@ -40,7 +41,7 @@ if(isset($_POST['loginSub'])) {
             <h1><b>Войти в роли коннектизена</b></h1>
         </div>
     </div>
-    <div class="container formDiv">
+    <div class="container formDiv logDiv">
         <div class="row mt-5">
             <form action="connectenLog.php" method="post">
                 <div class="input-group mb-3 px-3">

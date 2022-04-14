@@ -6,6 +6,7 @@ $id = (int)$_SESSION['id'];
 $nickname = $_SESSION['nickname'];
 $name = $_SESSION['name'];
 $surname = $_SESSION['surname'];
+$userpic = $_SESSION['userpic'];
 $email = $_SESSION['email'];
 
 if (isset($_POST['submitSW'])) {
@@ -54,5 +55,16 @@ if (isset($_POST['submitConnecten'])) {
         }
     }
 
-
+if (isset($_POST['giveans'])) {
+		$questionid = 1;
+		$dates = '04. 04. 2018';
+        $query = "INSERT INTO answers (questionid, answer, dates, author, authorUP) VALUES ('$questionid', '". $_POST['questans'] ."', '$dates', '$nickname', '$userpic')";
+        $res = mysqli_query($link, $query);
+        if ($res) {
+        	header("Location: connectumMoreQues.php");
+        }
+        else {
+        	echo "error";
+        }
+    }
  ?>

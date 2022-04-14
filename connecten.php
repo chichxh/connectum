@@ -2,16 +2,19 @@
 require 'connect.php';
 $sql = 'SELECT * FROM uploads';
 $result = mysqli_query($link, $sql);
+
+$sql = 'SELECT * FROM questions';
+$resultQ = mysqli_query($link, $sql);
  ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Connecten</title>
-</head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php require 'headlinks.php';  ?>
+</head>
 </style>
 <body>
 	<?php require 'header.php'; ?>
@@ -32,8 +35,21 @@ $result = mysqli_query($link, $sql);
 			<h1>Сообщество</h1>
 			<a href="connectumMoreQues.php"><button class="btn btn-green">Задай вопрос</button></a>
 		</div>
-		<div class="row">
-			
+		<div class="row mt-4">
+			<?php while ($row = mysqli_fetch_array($resultQ)): ?>
+				<div class="col-6 questionDiv">
+					<div class="row">
+						<div class="col-4">
+							<img src="<?= $row['authorUP']; ?>">
+						</div>
+						<div class="col-8">
+							<p><?= $row['date']; ?></p>
+							<h2><?= $row['question']; ?></h2>
+							<a href="#" class="green">1 ответ</a>
+						</div>
+					</div>
+				</div>
+			<?php endwhile; ?>
 		</div>
 	</div>
 

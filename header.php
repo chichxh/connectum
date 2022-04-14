@@ -12,13 +12,10 @@
             <a class="nav-link" href="devLog.php">Разработчикам ПО</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link connFont" href="connectenLog.php">Connecten</a>
+            <a class="nav-link connFont d-flex" href="connectenLog.php">Con<p class="green">n</p>ecten</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="index.php">Каталог</a>
         </li>
     </div>
 </ul>
-
-
-

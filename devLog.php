@@ -39,7 +39,7 @@ if(isset($_POST['loginSub'])) {
             <h1><b>Войти в роли разработчика</b></h1>
         </div>
     </div>
-    <div class="container formDiv">
+    <div class="container formDiv logDiv">
         <div class="row mt-5">
             <form action="devLog.php" method="post">
                 <div class="input-group mb-3 px-3">
@@ -52,6 +52,7 @@ if(isset($_POST['loginSub'])) {
                     <button type="submit" class="btn btn-green" name="loginSub">Войти</button>
                 </div>
             </form>
+            <div class="d-flex justify-content-center"><p>Еще нет аккаунта? </p> <a href="">Зарегистрироваться</a></div>
         </div>
     </div>
 

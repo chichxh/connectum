@@ -8,11 +8,11 @@ $result = mysqli_query($link, $sql);
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Connectum</title>
-</head>
+<title>Connectum</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php require 'headlinks.php'; ?>
+</head>
 <body>
 	<?php require 'header.php'; ?>
 
@@ -65,17 +65,17 @@ $result = mysqli_query($link, $sql);
 
 	<div class="container mt-5">
 		<div class="d-flex justify-content-around">
-			<p class="plist">Офисные пакеты</p>
-			<p class="plist">Графические редакторы</p>
-			<p class="plist">Антивирусы</p>
-			<p class="plist">Корпоротивный софт</p>
-			<p class="plist">Игры</p>
-			<p class="plist">Поисковые системы</p>
+			<a class="plist">Офисные пакеты</a>
+			<a class="plist">Графические редакторы</a>
+			<a class="plist">Антивирусы</a>
+			<a class="plist">Корпоротивный софт</a>
+			<a class="plist">Игры</a>
+			<a class="plist">Поисковые системы</a>
 		</div>
 
 		<div class="row mt-3 mb-5">
 			<?php while ($row = mysqli_fetch_array($result)): ?>
-				<div class="col-4">
+				<div class="col-4 mb-5">
 					<img src="<?= $row['img']; ?>" width="100%">
 					<div class="row mt-3">
 						<div class="col-3">

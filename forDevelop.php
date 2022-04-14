@@ -9,10 +9,10 @@ $result = mysqli_query($link, $sql);
 <html>
 <head>
 	<title></title>
-</head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php require 'headlinks.php'; ?>
+</head>
 <body>
 	<?php require 'header.php'; ?>
 
