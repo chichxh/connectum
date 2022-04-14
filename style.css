@@ -1,0 +1,58 @@
+body {
+	color: #fff;
+	background-color: #303030;
+	font-family: 'Jost', sans-serif;
+}
+h1, .montFont {
+	font-family: 'Montserrat', sans-serif;
+}
+.connFont {
+	font-family: 'JetBrains Mono', monospace;
+}
+h1 {
+	font-size: 54px;
+}
+p, a {
+	font-size: 18px;
+}
+.nav {
+	padding: 20px 30px;
+}
+.nav-link {
+	text-decoration: none;
+	color: #fff;
+}
+.nav-link:hover {
+	color: #55FF66;
+	transition-duration: 0.2s;
+}
+.formDiv {
+	padding: 30px 150px;
+	background-color: #0B0A0A;
+	border-radius: 10px;
+}
+.form-control {
+	color: #fff;
+	background-color: #303030;
+	border: none;
+}
+.form-select {
+	color: #fff;
+	background-color: #303030;
+	border: none;
+}
+.btn-green {
+	background-color: #55FF66;
+	color: #000;
+}
+.modal-content {
+	background-color: #0B0A0A;
+	color: #fff;
+}
+.plist:hover {
+	color: #55FF66;
+	transition-duration: 0.2s;
+}
+.green {
+	color: #55FF66;
+}

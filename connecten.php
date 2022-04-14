@@ -11,41 +11,66 @@ $result = mysqli_query($link, $sql);
 </head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<?php require 'headlinks.php';  ?>
+</style>
 <body>
+	<?php require 'header.php'; ?>
 	<div class="container">
-		<h1>Выложи свою работу на Connecten! Покажи всем свой талант!</h1>
-		<form action="upload.php" method="POST" enctype=multipart/form-data>
-			<div class="mb-3">
-			    <label for="exampleInputEmail1" class="form-label">Ваш проект</label>
-			    <input type="text" class="form-control" name="projname">
+		<div class="row">
+			<div class="col-8">
+				<h1><b>Начни развитие своего проекта вместе с нами</b></h1>
+				<p>Наш проект популяризирует начинающие проекты в России, также вступи в сильное комьюнити разработчиков России</p>
 			</div>
-			<div class="mb-3">
-			  	<label for="formFile" class="form-label">Выберте файлы вашего проекта</label>
-			  	<input class="form-control" type="file" name="projfile" multiple>
+			<div class="col-4">
+				<img src="">
 			</div>
-			<div class="mb-3">
-				<label class="form-label">Описание вашего проекта</label>
-				<input class="form-control" type="text" name="projdescr">
-			</div>
-			<div class="mb-3">
-				<label class="form-label">Скриншоты вашего проекта</label>
-				<input class="form-control" type="file" name="projimg" multiple>
-			</div>
-			<button type="submit" name="submitConnecten" class="btn btn-primary">Отправить</button>
-		</form>
+		</div>
 	</div>
-
 
 	<div class="container mt-5">
-		<?php while ($row = mysqli_fetch_array($result)): ?>
-			<p><?= $row['projname']; ?></p>
-			<p><?= $row['projdescr']; ?></p>
-			<a href="<?= $row['projfile']; ?>">Скачать <?= $row['projname']; ?></a>
-			<img src="<?= $row['projimg']; ?>">
-			<br>
-		<?php endwhile; ?>
+		<div class="d-flex justify-content-between">
+			<h1>Сообщество</h1>
+			<a href="connectumMoreQues.php"><button class="btn btn-green">Задай вопрос</button></a>
+		</div>
+		<div class="row">
+			
+		</div>
 	</div>
+
+	<div class="container mt-5">
+		<div class="d-flex justify-content-between">
+			<div class="d-flex"><h1>Работы от </h1><h1 class="connFont"> _connectizen</h1></div>
+			<a href="connectentAddWork.php"><button class="btn btn-green">Добавить свою работу</button></a>
+		</div>
+		<div class="row">
+			<?php while ($row = mysqli_fetch_array($result)): ?>
+				<div class="col-6" data-bs-toggle="modal" data-bs-target="#modal">
+					<img src="<?= $row['projimg']; ?>" width="100%"> <br>
+					<div class="d-flex justify-content-between">
+						<p><?= $row['projauthor']; ?></p>
+						<p><?= $row['projtype']; ?></p>
+					</div>
+				</div>
+
+				<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+					<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+						<div class="modal-content">
+							<div class="modal-body">
+								<img src="<?= $row['projimg']; ?>" width="100%"> <br>
+								<div class="d-flex justify-content-between">
+									<p><?= $row['projauthor']; ?></p>
+									<p><?= $row['projtype']; ?></p>
+								</div>
+								<p><?= $row['projdescr']; ?></p>
+								<a href="<?= $row['projfile']; ?>">Скачать исходник</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php endwhile; ?>
+		</div>
+	</div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

@@ -12,6 +12,7 @@ if(isset($_POST['loginSub'])) {
         header('Location: connecten.php'); 
         session_start();
         $_SESSION['id'] = (int)$data['id'];
+        $_SESSION['nickname'] = $data['nickname'];
         $_SESSION['name'] = $data['name'];
         $_SESSION['surname'] = $data['surname'];
         $_SESSION['email'] = $data['email'];
@@ -31,13 +32,15 @@ if(isset($_POST['loginSub'])) {
     <title>Войти</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <?php require 'headlinks.php'; ?>
  </head>
  <body>
     <div class="container">
         <div class="row text-center mt-5">
-            <h1><b>Войти для коннектизена</b></h1>
+            <h1><b>Войти в роли коннектизена</b></h1>
         </div>
+    </div>
+    <div class="container formDiv">
         <div class="row mt-5">
             <form action="connectenLog.php" method="post">
                 <div class="input-group mb-3 px-3">
@@ -46,8 +49,8 @@ if(isset($_POST['loginSub'])) {
                 <div class="input-group mb-3 px-3">
                     <input type="password" class="form-control" placeholder="Пароль" aria-label="password" aria-describedby="basic-addon1" name="password">
                 </div>
-                <div class="row mb-3 px-3 text-center">
-                    <button type="submit" class="btn btn-spec" name="loginSub">Войти</button>
+                <div class="mb-3 px-3 text-center">
+                    <button type="submit" class="btn btn-green" name="loginSub">Войти</button>
                 </div>
             </form>
         </div>
