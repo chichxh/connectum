@@ -6,13 +6,13 @@
     </div>
     <div class="d-flex justify-content-end">
         <li class="nav-item">
-            <a class="nav-link" href="vacancies.php">Вакансии</a>
+            <a class="nav-link connFont d-flex" href="connectenLog.php">Con<p class="green">n</p>ectent</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="devLog.php">Разработчикам ПО</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link connFont d-flex" href="connectenLog.php">Con<p class="green">n</p>ecten</a>
+            <a class="nav-link" href="vacancies.php">Вакансии</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="index.php">Каталог</a>

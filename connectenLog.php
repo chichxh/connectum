@@ -36,9 +36,11 @@ if(isset($_POST['loginSub'])) {
     <?php require 'headlinks.php'; ?>
  </head>
  <body>
+    <?php require 'header.php' ?>
+
     <div class="container">
-        <div class="row text-center mt-5">
-            <h1><b>Войти в роли коннектизена</b></h1>
+        <div class="d-flex justify-content-center mt-5">
+            <h1><b>Войти в роли</b></h1> <h1 class="connFont">_con</h1><h1 class="connFont green">n</h1><h1 class="connFont">ectizen</h1>
         </div>
     </div>
     <div class="container formDiv logDiv">
@@ -54,6 +56,7 @@ if(isset($_POST['loginSub'])) {
                     <button type="submit" class="btn btn-green" name="loginSub">Войти</button>
                 </div>
             </form>
+            <div class="d-flex justify-content-center"><p>Еще нет аккаунта? </p> <a href="">Зарегистрироваться</a></div>
         </div>
     </div>
 

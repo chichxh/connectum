@@ -37,7 +37,7 @@ $resultans = mysqli_query($link, $sql);
 						<p><?= $row['date']; ?></p>
 						<h4><?= $row['question']; ?></h4>
 						<p><?= $row['questiondetails']; ?></p>
-						<a class="green" data-bs-toggle="modal" data-bs-target="#modal">1 ответ</a>
+						<a class="green" data-bs-toggle="modal" data-bs-target="#modal">Смотреть ответы</a>
 					</div>
 					<div class="col-3 text-end">
 						 <button class="btn btn-green" data-bs-toggle="modal" data-bs-target="#modal">Ответить</button>

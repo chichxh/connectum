@@ -84,14 +84,36 @@ $result = mysqli_query($link, $sql);
 						<div class="col-9">
 							<p style="margin-bottom: 0px;"><b><?= $row['name']; ?></b></p>
 							<p><?= $row['decription']; ?></p>
-							<button class="btn btn-green">Больше</button>
+							<button class="btn btn-green" data-bs-toggle="modal" data-bs-target="#modal">Больше</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+					<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+						<div class="modal-content">
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-2 mb-3">
+										<img src="<?= $row['logo']; ?>" width="90%">
+									</div>
+									<div class="col-10">
+										<p style="margin-bottom: 0px;"><b><?= $row['name']; ?></b></p>
+										<p><?= $row['decription']; ?></p>
+									</div>
+								</div>
+								<div class="text-center">
+									<img src="<?= $row['img']; ?>" width="80%"> <br>
+									<button class="btn btn-green mt-3">Скачать <?= $row['name']; ?></button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			<?php endwhile; ?>
 		</div>
 	</div>
-
+	<?php require 'footer.php'; ?>
 
 	
 

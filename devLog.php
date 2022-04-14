@@ -34,6 +34,7 @@ if(isset($_POST['loginSub'])) {
     <?php require 'headlinks.php'; ?>
  </head>
  <body>
+    <?php require 'header.php' ?>
     <div class="container">
         <div class="row text-center mt-5">
             <h1><b>Войти в роли разработчика</b></h1>

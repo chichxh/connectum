@@ -35,17 +35,17 @@ $resultQ = mysqli_query($link, $sql);
 			<h1>Сообщество</h1>
 			<a href="connectumMoreQues.php"><button class="btn btn-green">Задай вопрос</button></a>
 		</div>
-		<div class="row mt-4">
+		<div class="row mt-4 justify-content-around">
 			<?php while ($row = mysqli_fetch_array($resultQ)): ?>
-				<div class="col-6 questionDiv">
+				<div class="col-5 questionDiv mb-5">
 					<div class="row">
 						<div class="col-4">
-							<img src="<?= $row['authorUP']; ?>">
+							<img src="<?= $row['authorUP']; ?>" width="100%">
 						</div>
 						<div class="col-8">
 							<p><?= $row['date']; ?></p>
 							<h2><?= $row['question']; ?></h2>
-							<a href="#" class="green">1 ответ</a>
+							<a href="connectumMoreQues.php" class="green">Смотреть ответы</a>
 						</div>
 					</div>
 				</div>
@@ -55,7 +55,7 @@ $resultQ = mysqli_query($link, $sql);
 
 	<div class="container mt-5">
 		<div class="d-flex justify-content-between">
-			<div class="d-flex"><h1>Работы от </h1><h1 class="connFont"> _connectizen</h1></div>
+			<div class="d-flex"><h1>Работы от </h1><h1 class="connFont"> _con</h1><h1 class="connFont green">n</h1><h1 class="connFont">ectizen</h1></div>
 			<a href="connectentAddWork.php"><button class="btn btn-green">Добавить свою работу</button></a>
 		</div>
 		<div class="row">
