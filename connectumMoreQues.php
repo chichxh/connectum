@@ -87,6 +87,32 @@ $resultans = mysqli_query($link, $sql);
 			<?php endwhile; ?>
 		</div>
 	</div>
+	<nav class="nav footer fixed-bottom">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-4">
+	                <p>Бутылка Коламбии <br>
+                    Контакты: +79998887766 <br>
+	                support@mail.com
+	                </p>
+	            </div>
+	            <div class="col-5">
+	                <p class="green">Каталог</p>
+	                <a href="" class="plist">Офисные пакеты</a>
+	                <a href="" class="plist">Графические редакторы</a>
+	                <a href="" class="plist">Антивирусы</a>
+	                <a href="" class="plist">Корпоративный софт</a>
+	                <a href="" class="plist">Игры</a>
+	                <a href="" class="plist">Поисковые системы</a>
+	            </div>
+	            <div class="col-3">
+	                <p>Вакансии </p>
+	                <div class="d-flex"><p class="connFont">Con</p><p class="connFont green">n</p><p class="connFont">ectent</p></div>
+	                <p>Для разработчиков</p>
+	            </div>
+	        </div>
+	    </div>
+	</nav>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

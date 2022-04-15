@@ -1,8 +1,9 @@
-<nav class="nav">
-    <div class="container footer">
+<nav class="nav footer">
+    <div class="container">
         <div class="row">
             <div class="col-4">
-                <p>Контакты: +79998887766 <br>
+                <p>Бутылка Коламбии <br>
+                    Контакты: +79998887766 <br>
                 support@mail.com
                 </p>
             </div>

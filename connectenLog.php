@@ -59,7 +59,32 @@ if(isset($_POST['loginSub'])) {
             <div class="d-flex justify-content-center"><p>Еще нет аккаунта? </p> <a href="">Зарегистрироваться</a></div>
         </div>
     </div>
-
+    <nav class="nav footer fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <p>Бутылка Коламбии <br>
+                    Контакты: +79998887766 <br>
+                    support@mail.com
+                    </p>
+                </div>
+                <div class="col-5">
+                    <p class="green">Каталог</p>
+                    <a href="" class="plist">Офисные пакеты</a>
+                    <a href="" class="plist">Графические редакторы</a>
+                    <a href="" class="plist">Антивирусы</a>
+                    <a href="" class="plist">Корпоративный софт</a>
+                    <a href="" class="plist">Игры</a>
+                    <a href="" class="plist">Поисковые системы</a>
+                </div>
+                <div class="col-3">
+                    <p>Вакансии </p>
+                    <div class="d-flex"><p class="connFont">Con</p><p class="connFont green">n</p><p class="connFont">ectent</p></div>
+                    <p>Для разработчиков</p>
+                </div>
+            </div>
+        </div>
+    </nav>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
